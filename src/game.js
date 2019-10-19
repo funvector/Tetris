@@ -10,7 +10,6 @@ export default class Game {
   lines = 0;
   playfield = this.createPlayField();
   activePiece = this.createPiece();
-
   nextPiece = this.createPiece();
 
   get level() {
@@ -38,6 +37,10 @@ export default class Game {
     }
 
     return {
+      score: this.score,
+      level: this.level,
+      lines: this.lines,
+      nextPiece: this.nextPiece,
       playfield
     }
   }
